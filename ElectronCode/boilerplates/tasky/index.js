@@ -30,9 +30,10 @@ app.on('ready', () => {
     if (mainWindow.isVisible()) {
       mainWindow.hide();
     } else {
+      const yPosition = process.platform === 'darwin' ? y : y - height;
       mainWindow.setBounds({
         x: x - width / 2,
-        y,
+        y: yPosition,
         height,
         width
       });
