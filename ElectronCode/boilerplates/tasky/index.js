@@ -8,6 +8,7 @@ let mainWindow;
 let tray;
 
 app.on('ready', () => {
+  app.dock.hide();
   mainWindow = new BrowserWindow({
     height: 500,
     width: 300,
