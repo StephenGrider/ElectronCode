@@ -19,11 +19,15 @@ ipcMain.on('videos:added', (event, videos) => {
   const promises = _.map(videos, video => {
     return new Promise((resolve, reject) => {
       ffmpeg.ffprobe(video.path, (err, metadata) => {
-        resolve(metadata);
+        video.duration = metadata.format.duration;
+        video.format = 'avi';
+        resolve(video);
       });
     });
   });
 
   Promise.all(promises)
-    .then((results) => console.log(results));
+    .then((results) => {
+      mainWindow.webContents.send('metadata:complete', results);
+    });
 });
