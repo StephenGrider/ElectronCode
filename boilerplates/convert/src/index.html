@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Timer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+      .video-select-screen h4, .video-select-screen-small h4 {
+        text-align: center;
+      }
+
+      .video-list .collection-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        border-bottom: 1px solid #e0e0e0 !important;
+      }
+
+      .convert-panel {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .video-list {
+        height: 50vh;
+        overflow: scroll;
+      }
+
+      .video-list .collection-item .btn {
+        margin-left: 10px;
+      }
+
+      .hovering {
+        border: 3px dashed black !important;
+      }
+
+      .dropzone {
+        width: 100%;
+        height: 100%;
+        border-width: 2px;
+        border-color: rgb(102, 102, 102);
+        border-style: dashed;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .dropzone-active {
+        border-style: solid;
+        background-color: #66bb6a
+      }
+
+      .dropzone-reject {
+        border-style: solid;
+        background-color: #e57373;
+      }
+
+      .video-select-screen {
+        height: 90vh;
+        width: 90vw;
+        margin: 5vh auto;
+      }
+
+      .video-select-screen-small {
+        height: 25vh;
+        margin: 5vh 0;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        height: 95vh;
+      }
+
+      .drop-message {
+        display: flex;
+        align-self: center;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script src="http://localhost:4172/bundle.js"></script>
+</html>
