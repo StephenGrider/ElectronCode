@@ -11,7 +11,7 @@ export const addVideos = videos => dispatch => {
 // to start converting videos.  Also listen for feedback
 // from the MainWindow regarding the current state of
 // conversion.
-export const convertVideos = () => (dispatch, getState) => {
+export const convertVideos = videos => dispatch => {
 
 };
 
