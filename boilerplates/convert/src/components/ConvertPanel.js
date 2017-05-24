@@ -17,7 +17,7 @@ class ConvertPanel extends Component {
         <button className="btn red" onClick={this.onCancelPressed}>
           Cancel
         </button>
-        <button className="btn" onClick={this.props.convertVideos(this.props.videos)}>
+        <button className="btn" onClick={this.props.convertVideos.bind(null, this.props.videos)}>
           Convert!
         </button>
       </div>
