@@ -9,7 +9,7 @@
   },
   "author": "Rallycoding",
   "devDependencies": {
-    "electron": "~1.6.2"
+    "electron": "~5.0.2"
   },
   "dependencies": {
     "babel-core": "^6.24.0",
