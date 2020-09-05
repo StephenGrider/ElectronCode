@@ -6,7 +6,11 @@ const { app, BrowserWindow, ipcMain } = electron;
 let mainWindow;
 
 app.on('ready', () => {
-  mainWindow = new BrowserWindow({});
+  mainWindow = new BrowserWindow({
+  webPreferences: {
+            nodeIntegration: true
+        }
+  });
   mainWindow.loadURL(`file://${__dirname}/index.html`);
 });
 
